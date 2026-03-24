@@ -1,0 +1,73 @@
+ DNS Kayıtlarını Sıfırla  MX Kayıtlarını Sıfırla
+Mail(MX) Kayıtları
+Zone	Adres	
+kfgmimarlik.com. (MX 10)	mx-02.kurumsaleposta.com.	
+kfgmimarlik.com. (MX 5)	mx-01.kurumsaleposta.com.	
+Yeni Kayıt (MX)
+Host(A) Kayıtları
+Zone	Adres	
+kfgmimarlik.com	94.73.147.166	
+Yeni Kayıt (A)
+Alias(CNAME) Kayıtları
+Zone	Adres	
+www.kfgmimarlik.com	kfgmimarlik.com.	
+autodiscover.kfgmimarlik.com	mail.kurumsaleposta.com.	
+ftp.kfgmimarlik.com	kfgmimarlik.com.	
+_ba75091a3d802c5bd44fcb13501ff756.kfgmimarlik.com	b33c42742cf2b73379a2d2d684e0e743.74c53c9bf1647a01969f606e07a48d8b.5d04cc8a4.comodoca.com.	
+Yeni Kayıt (CNAME)
+Text(TXT) Kayıtları
+Zone	Data	
+ntr._domainkey.kfgmimarlik.com	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7fVLzgXQssZEHA6pq0PS/XfJaKk9x8aOiZuM3BctFWgUBb+NRN6nYvR6GTOR5z7qO9AxkurvFDFukY6pqFqczHBAReUId+D5RKu0Mt7W/B05Llj1ygWTcpoAdU6be/rE0lIr79Yp/sz6CP7xaiZyAPiZ2Zb/VFtWfZWQ3e+PFOd7hzSaz2JHgURJQ1U+P7aL2w4klvL5MM2HxXwWb/ChxgmVH/P2PrkvBv+ItCyeFcUxdvZVs4ivMknvvnMMfBmZyS58hsMeNzwFG/8VK8cgDtVosckSHv8crtcjCTotbxKHMZm25fDVpqhxBE2LpKS6wF4XSGtY3sXL99YWuJytFwIDAQAB"	
+kfgmimarlik.com	"v=spf1 include:_spfcls.natrohost.com include:_netblockshalon.natrohost.com ~all"	
+Yeni Kayıt (TXT)
+Stands for Service Record (SRV) Kayıtları
+Zone	Öncelik	Port	Ağırlık	Hedef	
+_autodiscover._tcp.kfgmimarlik.com	10	443	10	mail.kurumsaleposta.com.	
+Yeni Kayıt (SRV)
+
+--şimdiki hal
+
+
+Şimdi bu proje olayı hiç beklediğim gibi olmadı.şimdi bu proje kalsörü ve tüm çalışmamızı unut.yeni bir projev2 klasörü aç. ben sana bir statik tema vereceğim.sayfalarda headerlar bile bir yerden gelmiyor her sayfada aynıları yazılmışmeüler footer vs hep ayrı ayrı yerlerde çalışıyor.
+şimdi senden önce bir dinamik header footer ve content olacak şekilde bir site tasarlamnı istiyorum.sonra sana verdiğim temadan önce header ve footer ı sonrada content için yavaş yavaş ana sayfa portfolyo news gibi sayfaları inceleyerek gereklli tüm js css ve html içerikerni almanı ve bizim yapımıza uydurmanı isteyeceğm.
+yapımızda öncelikle dil desteği olacak bu nedenle tüm içerikleri alırken i18 json dosyamıza sayfa sayfa yazmayı hiçbir zaman unutma buna göre bir proje planı ve sonrada tema kopyalama planı hazırla.bu ana yapıyı çıkart ve bunları core diye bir kenarda tutalım sonra bu core olan ile vereceğim tema ve sayfa sayfa kopyalama işini proje ismi ile bir kalsörde yapacağız
+şimdi bu bahsettiğim yapıyı kur ortak kulalnımları header gibi vs ortak yere koyalım.
+bu iş için tema kopyalama için kullanacğaın yol haritası ve copilot instroduction md dosyalarınıda yart ve bunları referans alalım ara arada güncelleyelim.
+öncelik le notlarım
+isimlendirmeler hep türkçe olsun.jsonlardaki keyler de dahil.
+temadan alacağımız sayflar ilgili bizdeki yapı gereğince farklı sayfa ismi ile oalcak ama ben sana zaten sayfa sayfa söyleyeceğim.
+datalarımız ve sayfa içeriklerimiz statik olmayacak temadaki gibi hepsini sayfa sayfa jsondan okuyacağız.her sayfanın bir jsonuda olacak aslında.
+ortak css js script yada javascript kodları tek noktada toparlanarak index e yazılacak
+temadan alacağımız tüm resim icon vb herşey asset klasöründe ilgili klasörüne atılacak.ancak hangi sayfada ahangi resim kullanılacaksa ilgili keyle o sayfaının jsonunda olacak.o jsonda assetteki yolu yazabilir.
+örneğin bir galeri sayfamız varsa galeri listimiz oalcak resimler vs assette olsada isimler tanımlamar vs ve resim yolalrı hep ilgili sayfa jsonundan okunacak
+jsonlar sayafalarla aynı isimde oalcak ama data klasöründe olacakyine i18 dosyasıda genel oalrak sayfa bazlı keylere ayrıştırılmış olsada data klasöründe tek yerde olacak
+menuler yine bir jsonda olacak ilgili menünün linkleri bu jsonda olacak.buna göre gerekli ek css leri yazabilirsin.
+şimdi buna göre ilgili klasörü oluştur ve burası üzerinden devam edelim.
+unutma sana vereceğim tüm sayfalar tamamen statik sen ilgili js leri nerede tutacağına karar vererek ilgili sayfaları alırken de gerekli yerleri alıp geresiz yerleri almayacaksın.yada içerikleri ilgili jsona alarak o jsondan okyacak şekile çevireceksin.bu nedenle özel fonksiyonlarını yaz ve bunları index te import et ki her yerde kullnabil.
+unutma ana yapımız header footer ve content oalcak.sonrasında bu core hali kullnarak temayı sayfa sayfa giydireceğiz.bunu sakın unutma.tema giydirme için proje proje hareket edeceğiz.ama ana yapıda core u kullancağız.core içinde dil desteği vb yapımızda olmalı ki bir projeye başlayınca bunu referasn alıp düzenlemeleri yapabilelim.
+tüm bunlar için planlamanı yap gerekli klasör ve md dosyarlarını oluştur.
+
+
+şimdi ben HTTrack  ile tema olarak kullanacağım temayı kopyaladım.D:\development\ozel\kfgmimarlik\temalar buranın altına D:\development\ozel\kfgmimarlik\temalar\httpsthemes.pixelwars.orgarchydemo-01 şeklinde indirdim.tam olark içerikleride asna veriyorum.
+ana sayfa
+file:///D:/development/ozel/kfgmimarlik/ham-temala/httpsthemes.pixelwars.orgarchydemo-01/demo1/themes.pixelwars.org/archy/demo-01/index.html
+hakkımızda
+file:///D:/development/ozel/kfgmimarlik/ham-temala/httpsthemes.pixelwars.orgarchydemo-01/demo1/themes.pixelwars.org/archy/demo-01/about/index.html
+hizmetlerimiz
+file:///D:/development/ozel/kfgmimarlik/ham-temala/httpsthemes.pixelwars.orgarchydemo-01/demo1/themes.pixelwars.org/archy/demo-01/services/index.html
+projelerimiz
+file:///D:/development/ozel/kfgmimarlik/ham-temala/httpsthemes.pixelwars.orgarchydemo-01/demo1/themes.pixelwars.org/archy/demo-01/projects/index.html
+haberler
+file:///D:/development/ozel/kfgmimarlik/ham-temala/httpsthemes.pixelwars.orgarchydemo-01/demo1/themes.pixelwars.org/archy/demo-01/news/index.html
+iletişim
+file:///D:/development/ozel/kfgmimarlik/ham-temala/httpsthemes.pixelwars.orgarchydemo-01/demo1/themes.pixelwars.org/archy/demo-01/contact/index.html
+bu sayfaları ve tüm css vs kodları inceleyerek bizim yapımıza uyarlamanı istiyorum gerekli tüm css html ve tüm içerikleri resimler dahil proje nin içine almanı istiyorum adım adım sayfa sayfa ilerleyelim.bizim projemizde siteye git deiğimzide bu sayfalar açılmalı.
+eğer bunlar bizim projemize yedirilemezse sorun olur çünkü bu kemik projemize tüm jsonlarıda ilgili html ilgili componenetler vs olarak dodlurup çalıştırmamız lazım.
+yönetim panelinde örneğin projelere ekleme yaptığımızda otomatik yanstıabilmemiz laızm
+buan grme detaylıca analiz yap ve yol haritası çıakrt.
+projemizde eksiklik varsada giderelim.
+ileride aynı çatı projemize yine tema olarak bu şekidle vereceğim sayfalar cssler vs ekleyebilmeli ve direk o halde de kullanabilmeliyiz.
+buna göre tema kopyalama ve giydirme şeklinde bir plan çıkart.md dosyasını ayarla bu arada git ignora temalar klasörünü ekle bu klasörü hiçbir zaman commitlemeyelim
+buna göre yol haritaını ve planını çıkart onayıma sun.
+
+hadi işimize geri dönelim
