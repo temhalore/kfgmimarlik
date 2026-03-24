@@ -1,0 +1,12 @@
+{
+  "tr": [
+    {"gorsel": "../assets/placeholder.jpg", "baslik": "Proje 1"},
+    {"gorsel": "../assets/placeholder.jpg", "baslik": "Proje 2"},
+    {"gorsel": "../assets/placeholder.jpg", "baslik": "Proje 3"}
+  ],
+  "en": [
+    {"gorsel": "../assets/placeholder.jpg", "baslik": "Project 1"},
+    {"gorsel": "../assets/placeholder.jpg", "baslik": "Project 2"},
+    {"gorsel": "../assets/placeholder.jpg", "baslik": "Project 3"}
+  ]
+}

@@ -1,0 +1,36 @@
+/* Ana Tema CSS Dosyası */
+:root {
+  --ana-renk: #11467c;
+  --yardimci-renk: #735c00;
+  --arka-plan: #f9f9fb;
+  --yazi-rengi: #1a1c1e;
+  --baslik-fontu: 'Space Grotesk', sans-serif;
+  --govde-fontu: 'Manrope', sans-serif;
+}
+
+body {
+  background: var(--arka-plan);
+  color: var(--yazi-rengi);
+  font-family: var(--govde-fontu);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--baslik-fontu);
+  color: var(--ana-renk);
+}
+
+.btn {
+  background: var(--ana-renk);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--yardimci-renk);
+}
+
+/* Bootstrap ile uyumlu ek stiller buraya eklenebilir */

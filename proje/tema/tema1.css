@@ -1,0 +1,13 @@
+/* Örnek Tema 1 - Açık Tema */
+:root {
+  --tema-arka: #fff;
+  --tema-on: #222;
+  --tema-ana: #007bff;
+  --tema-ikincil: #f8f9fa;
+  --tema-font: 'Montserrat', Arial, sans-serif;
+}
+body {
+  background: var(--tema-arka);
+  color: var(--tema-on);
+  font-family: var(--tema-font);
+}

@@ -1,0 +1,3 @@
+User
+DESKTOP-VU2KTJS 
+30 Mayýs 2021 Pazar  18:37:02
