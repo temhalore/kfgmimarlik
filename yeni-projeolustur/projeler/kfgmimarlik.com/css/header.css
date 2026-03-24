@@ -1,9 +1,0 @@
-/* Header'a özel stiller (örnek, detaylar tema css'lerinden alınacak) */
-.site-header { background: #fff; border-bottom: 1px solid #eee; }
-.header-wrap { max-width: 1180px; margin: 0 auto; }
-.site-title img { max-height: 30px; }
-.menu-toggle { display: none; }
-@media (max-width: 991px) {
-  .menu-toggle { display: block; }
-  .nav-menu { display: none; }
-}

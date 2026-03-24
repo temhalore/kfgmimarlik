@@ -1,8 +1,0 @@
-{
-  "menuler": [
-    { "isim": "Ana Sayfa", "link": "/", "anahtar": "ana_sayfa" },
-    { "isim": "Portfolyo", "link": "/portfolyo", "anahtar": "portfolyo" },
-    { "isim": "Haberler", "link": "/haberler", "anahtar": "haberler" },
-    { "isim": "İletişim", "link": "/iletisim", "anahtar": "iletisim" }
-  ]
-}
