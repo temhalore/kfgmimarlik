@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f8f8;
+}
+#header, #footer {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+}
+#content {
+  min-height: 400px;
+  padding: 40px 20px;
+  background: #fff;
+}
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+.slide {
+  min-width: 300px;
+  background: #eee;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+.slide img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

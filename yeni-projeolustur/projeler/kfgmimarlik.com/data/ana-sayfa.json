@@ -1,0 +1,11 @@
+{
+  "baslik": "KFG Mimarlık - Ana Sayfa",
+  "icerik": "<div class='slider'>
+    <div class='slide'><img src='../assets/joel-filipe-PkE6yQwE-6Y-unsplash.jpg' alt='Slide 1'><h2>Fikirleri Yapılara Dönüştürüyoruz</h2><p>Mimari projeleriniz için en iyi çözümler.</p></div>
+    <div class='slide'><img src='../assets/daniel-stone-A4TtfFo_qRw-unsplash.jpg' alt='Slide 2'><h2>Vizyonunuzu Gerçeğe Dönüştürün</h2><p>Hayalinizdeki yapılar için profesyonel destek.</p></div>
+    <div class='slide'><img src='../assets/simone-hutsch-D7nSqgT-_GE-unsplash.jpg' alt='Slide 3'><h2>Mekanlar Tasarlıyoruz</h2><p>Yaşam alanlarınızı birlikte şekillendirelim.</p></div>
+  </div>"
+{
+  "baslik": "Ana Sayfa",
+  "aciklama": "KFG Mimarlık ana sayfa verisi."
+}
