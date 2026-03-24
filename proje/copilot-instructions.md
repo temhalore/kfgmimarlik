@@ -17,7 +17,7 @@
 - Kolay tema değişimi için modüler HTML/CSS yapısı olacak.
 - Tüm anahtar kelimeler ve açıklamalar SEO uyumlu olacak.
 
-## Klasör Yapısı ve Sayfalar
+## Klasör Yapısı ve Sayfalar 
 - assets/ : Tüm görseller ve medya dosyaları
 - css/ : Tema ve stil dosyaları
 - js/ : Gerekli scriptler
