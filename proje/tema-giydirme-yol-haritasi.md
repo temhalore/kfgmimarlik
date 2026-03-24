@@ -1,51 +1,53 @@
-# Tema Kopyalama ve Giydirme Yol Haritası
+# Tema Kopyalama ve Giydirme Yol Haritası (Revize)
 
 ## Amaç
-- Dışarıdan indirilen temaların (ör: Pixelwars Archy) projemize kolayca entegre edilmesi, tüm HTML, CSS, JS ve görsellerin projenin modüler, dinamik ve panelden yönetilebilir yapısına uygun şekilde dönüştürülmesi.
-- Gelecekte yeni temalar da aynı çatıya kolayca eklenebilmeli ve aktif tema seçilebilmeli.
+- HTTrack veya benzeri araçlarla indirilen temaların (ör: Pixelwars Archy) tüm dosyalarını (HTML, CSS, JS, img, font, vs.) bozulmadan proje/tema/archy/ altına kopyalamak.
+- Her yeni tema için aynı iskelet ve panel kullanılacak, sadece tema klasörü değişecek.
+- Panelden içerik eklenince, ilgili component ve JSON otomatik güncellenecek, tema hangi domain içinse o tema klasörüyle çalışacak.
+- Tüm sayfalar (index, about, services, projects, news, contact) ve alt sayfalar, iç linkler, portfolyo detayları, popup’lar, JS fonksiyonları, görseller vs. eksiksiz uyarlanacak.
+- Panelden tema seçimi, içerik yönetimi ve önizleme mümkün olacak.
+- temalar/ klasörü .gitignore’da olacak, asla repoya eklenmeyecek.
 
 ## Yol Haritası
 
-### 1. Tema Analizi ve Dosya Aktarımı
-- İndirilen tema klasöründeki tüm HTML, CSS, JS ve görselleri /proje/tema/altına kopyala (ör: proje/tema/archy/).
-- Temanın asset, css, js, img gibi tüm dosyalarını bozmadan taşı.
-- .gitignore ile temalar/ klasörü repoya dahil edilmez.
+### 1. Tema Kopyalama
+- HTTrack ile indirilen tema ve tüm dosyaları (HTML, CSS, JS, img, font, vs.) bozulmadan proje/tema/archy/ altına kopyalanır.
+- temalar/ klasörü .gitignore’a eklenir, asla repoya eklenmez.
 
-### 2. Sayfa Eşleştirme ve Component Analizi
-- Temadaki her sayfa (index, about, services, projects, news, contact) için projemizde karşılık gelen pages/ dosyasını belirle.
-- Her sayfanın ana içerik, menü, header, footer, slider, galeri, form gibi componentlerini analiz et.
-- Temadaki HTML yapısını, projenin component ve JSON tabanlı dinamik sistemine uygun şekilde böl.
+### 2. Sayfa ve Component Analizi
+- Temadaki her ana ve alt sayfa (index, about, services, projects, news, contact, portfolyo detayları, popup’lar, iç linkler, JS fonksiyonları) tek tek incelenir.
+- Her sayfa ve component, projenin pages/ ve component/ klasörlerine karşılık gelecek şekilde eşleştirilir.
 
-### 3. HTML ve Component Dönüşümü
-- Temadaki header, footer, menü, slider, galeri, form, proje kartı gibi yapıları ayrı component dosyalarına ayır.
-- Her componenti projenin /component/ klasörüne taşı ve dinamik veriyle çalışacak şekilde düzenle.
-- Statik içerikleri data/ klasöründeki ilgili JSON dosyalarına aktar.
+### 3. HTML, CSS, JS ve Görsel Uyarlama
+- Temadaki HTML yapısı, projenin dinamik component ve JSON tabanlı sistemine uygun şekilde bölünür.
+- Statik içerikler ilgili JSON dosyalarına aktarılır.
+- Gerekli CSS/JS dosyaları tema klasöründe tutulur, tema seçimine göre dinamik yüklenir.
+- Çakışan/gereksiz kodlar ayıklanır.
 
-### 4. CSS ve JS Entegrasyonu
-- Temanın CSS ve JS dosyalarını /proje/tema/archy/ altına taşı.
-- Gerekli olanları projenin ana yapısına import et (ör: tema seçimiyle birlikte ilgili CSS/JS yüklensin).
-- Çakışan veya gereksiz CSS/JS kodlarını ayıkla.
+### 4. Panel ve JSON Entegrasyonu
+- Tüm içerikler (başlık, metin, görsel, menü, slider, galeri, projeler, haberler, iletişim, portfolyo detayları) JSON ve panelden yönetilebilir hale getirilir.
+- Panelden içerik eklenince, ilgili component ve JSON otomatik güncellenir.
+- Panelde tema seçimi ve önizleme özelliği eklenir.
 
-### 5. Dinamik İçerik ve Panel Entegrasyonu
-- Tüm sayfa içeriklerini (başlık, metin, görsel, menü, slider, galeri, projeler, haberler, iletişim vs.) JSON dosyalarına aktar.
-- Panelden bu içeriklerin eklenip düzenlenmesini sağla.
-- Panelde tema seçimi ve önizleme özelliği ekle.
+### 5. Domain ve Tema Bağımsızlığı
+- Her domain için ilgili tema klasörü kullanılır, panelden tema seçimiyle otomatik geçiş yapılabilir.
+- Yeni tema eklemek için sadece tema klasörüne dosyalar kopyalanır, panel ve iskelet değişmeden çalışır.
 
-### 6. Sayfa Yönlendirme ve SEO
-- "Siteye Git" ile açılan sayfalar, yeni temanın görünümüne uygun şekilde açılır.
-- SEO meta tagleri ve Open Graph verileri dinamik olarak güncellenir.
-
-### 7. Test ve Son Rötuşlar
-- Tüm sayfalar, componentler ve içerikler dinamik olarak çalışıyor mu test et.
-- Eksik kalan veya statik kalan alanları tespit edip düzelt.
-- Responsive ve mobil uyumluluk kontrolü yap.
+### 6. SEO, Responsive ve Test
+- Tüm sayfalarda SEO meta tagleri ve Open Graph verileri dinamik olur.
+- Responsive ve erişilebilirlik kontrolleri yapılır.
+- Tüm componentler ve içerikler dinamik çalışıyor mu test edilir.
 
 ## Eksiklikler ve Geliştirme Notları
-- Şu an projenin iskeleti hazır, ancak tema giydirme için componentlerin ve JSON şemalarının temaya göre genişletilmesi gerekecek.
-- Panel arayüzü sade, içerik ve component yönetimi için daha gelişmiş formlar ve görsel yükleme desteği eklenmeli.
+- Component ve JSON şemaları temaya göre genişletilmeli.
+- Panel arayüzü için gelişmiş formlar ve görsel yükleme desteği eklenmeli.
 - Çoklu tema desteği için tema seçici ve dinamik CSS/JS yükleme mekanizması eklenmeli.
 
 ## Onay Sonrası İlk Adımlar
-1. Temadaki tüm dosyaları proje/tema/archy/ altına taşı.
-2. Her sayfa için (anasayfa, hakkımızda, hizmetler, projeler, haberler, iletişim) component ve JSON eşleştirmesi yap.
-3. Component ve içerik dönüşümüne adım adım başla.
+1. HTTrack ile alınan temanın tüm dosyalarını proje/tema/archy/ altına kopyala.
+2. Temadaki her sayfa, alt sayfa, iç link, portfolyo detayları, popup, JS fonksiyonları ve görselleri analiz et.
+3. Her sayfa ve componenti, projenin pages/ ve component/ klasörlerine karşılık gelecek şekilde eşleştir.
+4. Statik içerikleri ilgili JSON dosyalarına aktar, dinamik component yapısını kur.
+5. Panelden içerik ekleme, tema seçimi ve önizleme özelliklerini geliştir.
+6. SEO, responsive ve erişilebilirlik kontrollerini yap.
+7. Tüm entegrasyon adımlarını bu dosyada güncel tut.
